@@ -1,0 +1,1 @@
+self.__REACT_LOADABLE_MANIFEST='{"pages/index.js -> ../components/ChatInterface":{"id":7590,"files":["static/chunks/590.79ec80f3c0c8ed66.js"]}}';

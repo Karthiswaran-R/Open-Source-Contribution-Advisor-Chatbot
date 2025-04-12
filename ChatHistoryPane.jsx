@@ -1,0 +1,72 @@
+export default function ChatHistoryPane({ messages }) {
+  return (
+    <div className="history-pane">
+      <h2>Chat History</h2>
+      <div>
+        {messages
+          .filter((message) => message.timestamp) // Filter out any undefined messages
+          .map((message, index) => (
+            <div key={index}>
+              <div className={`message-container ${message.isUser ? 'user' : 'bot'}`}>
+                <div className={`label ${message.isUser ? 'right' : 'left'}`}>
+                  {message.isUser ? '👤 You' : '🤖 Bot'}
+                </div>
+                <div className={`message ${message.isUser ? 'user' : 'bot'}`}>{message.text}</div>
+              </div>
+            </div>
+          ))}
+      </div>
+
+      <style jsx>{`
+        .history-pane {
+          background-color: #2c2c2c;
+          padding: 20px;
+          margin-top: 20px;
+          border-radius: 12px;
+          max-height: 400px;
+          overflow-y: scroll;
+        }
+
+        h2 {
+          color: #66fcf1;
+          text-align: center;
+          margin-bottom: 15px;
+        }
+
+        .message-container {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          margin: 12px;
+        }
+
+        .label {
+          font-size: 0.95rem;
+          margin-bottom: 4px;
+          color: #66fcf1;
+        }
+
+        .message {
+          padding: 12px 16px;
+          border-radius: 16px;
+          max-width: 70%;
+          font-size: 1rem;
+          font-weight: 500;
+          line-height: 1.4;
+          word-break: break-word;
+        }
+
+        .user {
+          background-color: #1e1e1e;
+          color: #66fcf1;
+        }
+
+        .bot {
+          background-color: #333;
+          color: #66fcf1;
+        }
+      `}</style>
+    </div>
+  );
+}
+
