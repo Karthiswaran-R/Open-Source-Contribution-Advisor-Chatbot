@@ -1,7 +1,3 @@
 node_modules/
 node_modules/
 node_modules/
-# .env.example
-GROQ_API_KEY=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
-GITHUB_TOKEN=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
-MODEL_PROVIDER=openai
