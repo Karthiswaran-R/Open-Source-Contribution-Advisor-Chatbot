@@ -32,7 +32,90 @@ OpenSourceGuru is an AI-powered advisor chatbot that helps developers find the b
 
 git clone https://github.com/Karthiswaran-R/Open-Source-Contribution-Advisor-Chatbot.git
 cd open-source-chatbot
+### 2. Install Dependencies
+First, you need to install the required dependencies for both the frontend and backend:
 
+Frontend (Next.js) Dependencies:
+
+Navigate to the frontend folder (if it's separate) or directly in the project root if there's no separation.
+
+Run the following command to install all the necessary packages for the frontend:
+
+bash
+Copy
+Edit
+npm install
+Backend (Python/Flask):
+
+If the backend is Python-based (Flask, FastAPI, etc.), navigate to the backend folder (usually it will be a separate folder like backend or server).
+
+Create a virtual environment:
+
+bash
+Copy
+Edit
+python -m venv venv
+Activate the virtual environment:
+
+For Windows:
+
+bash
+Copy
+Edit
+venv\Scripts\activate
+For Mac/Linux:
+
+bash
+Copy
+Edit
+source venv/bin/activate
+Install the required Python dependencies:
+
+bash
+Copy
+Edit
+pip install -r requirements.txt
+### 3. Configure Environment Variables (if applicable)
+If there are any environment variables (like API keys, database URLs, etc.), you'll need to set them up.
+
+Check for a .env or similar file in the root of the project.
+
+If it’s missing, check the documentation for the environment variables needed (often these are mentioned in the README.md file or requirements.txt).
+
+### 4. Start the Backend Server
+In the backend folder, run the following to start the Flask server (or the relevant backend server you’re using):
+
+bash
+Copy
+Edit
+python app.py
+or
+
+bash
+Copy
+Edit
+python server.py
+If you’re using Flask, it should be accessible by default at http://localhost:5000.
+
+If you’re using another backend framework (like FastAPI), refer to the project documentation to start it.
+
+### 5. Start the Frontend Server
+In the project root or frontend folder, run the following to start the Next.js app:
+
+bash
+Copy
+Edit
+npm run dev
+This will start the frontend server, and you can access it by visiting http://localhost:3000 in your web browser.
+
+### 6. Test the Application
+Once both the frontend and backend servers are running:
+
+Open http://localhost:3000 in your browser.
+
+Interact with the chatbot on the frontend and check if it’s communicating properly with the backend.
+
+You can check the browser console or the terminal for any error messages if something doesn’t work.
 ## 🙌 Credits
 Built with 💚 by Karthiswaran R
 VLSI Engineer | Open Source Enthusiast | Creator of VLSI Design Hub
