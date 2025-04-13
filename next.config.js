@@ -1,4 +1,8 @@
 // next.config.js
 module.exports = {
-  output: 'export',
+  reactStrictMode: true,
+  swcMinify: true,
+  experimental: {
+    appDir: true,
+  },
 };
