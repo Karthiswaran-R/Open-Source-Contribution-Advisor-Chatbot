@@ -1,4 +1,4 @@
-#  OpenSourceGuru – Open Source Contribution Advisor Chatbot
+# Open Source Contribution Advisor Chatbot
 
 OpenSourceGuru is an AI-powered advisor chatbot that helps developers find the best open-source projects to contribute to, tailored to their skills, interests, and goals. It uses real-time GitHub API integration, dynamic input parsing, and smart tool selection to guide users through meaningful contributions.
 
