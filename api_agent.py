@@ -1,14 +1,16 @@
+# backend/main.py
 from fastapi import FastAPI
 import os
 from dotenv import load_dotenv
 from langchain.agents import initialize_agent, AgentType
 from langchain.chat_models import ChatOpenAI
 from langchain.agents import Tool
+from fastapi.middleware.cors import CORSMiddleware
 
-# Load .env file
+# Load environment variables
 load_dotenv()
 
-# Get Groq API Key
+# Get the Groq API Key
 groq_api_key = os.getenv("GROQ_API_KEY")
 if not groq_api_key:
     raise ValueError("GROQ_API_KEY not found. Set it in your environment or .env file.")
@@ -49,7 +51,7 @@ llm = ChatOpenAI(
     temperature=0
 )
 
-# Initialize Agent
+# Initialize the agent
 agent = initialize_agent(
     tools=tools,
     llm=llm,
@@ -59,6 +61,15 @@ agent = initialize_agent(
 
 # Create FastAPI app
 app = FastAPI()
+
+# Enable CORS (cross-origin requests)
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["https://open-source-contribution-advisor-chatbot.vercel.app/"],  # You can restrict this to your frontend's domain for security
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 @app.get("/")
 async def root():
@@ -71,4 +82,3 @@ async def ask_agent(query: str):
         return {"response": response.get("output", "No output returned.")}
     except Exception as e:
         return {"error": str(e)}
-
