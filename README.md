@@ -32,3 +32,7 @@ OpenSourceGuru is an AI-powered advisor chatbot that helps developers find the b
 
 git clone https://github.com/Karthiswaran-R/Open-Source-Contribution-Advisor-Chatbot.git
 cd open-source-chatbot
+
+## 🙌 Credits
+Built with 💚 by Karthiswaran R
+VLSI Engineer | Open Source Enthusiast | Creator of VLSI Design Hub
