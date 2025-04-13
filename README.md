@@ -29,7 +29,7 @@ OpenSourceGuru is an AI-powered advisor chatbot that helps developers find the b
 ## 🧪 Local Setup
 
 ### 1. Clone the repo
-'''
+
 git clone https://github.com/Karthiswaran-R/Open-Source-Contribution-Advisor-Chatbot.git
 cd open-source-chatbot
 ### 2. Install Dependencies
@@ -116,6 +116,22 @@ Open http://localhost:3000 in your browser.
 Interact with the chatbot on the frontend and check if it’s communicating properly with the backend.
 
 You can check the browser console or the terminal for any error messages if something doesn’t work.
+
+### 7. Contributing
+We welcome contributions to this project. To contribute:
+
+###### Fork this repository.
+
+##### Create a new branch: git checkout -b feature-name
+
+##### Commit your changes: git commit -m 'Add new feature'
+
+##### Push to the branch: git push origin feature-name
+
+ ##### Create a new Pull Request
+
+## 8. License
+This project is licensed under the MIT License - see the LICENSE file for details.
 ## 🙌 Credits
 Built with 💚 by Karthiswaran R
 VLSI Engineer | Open Source Enthusiast | Creator of VLSI Design Hub
