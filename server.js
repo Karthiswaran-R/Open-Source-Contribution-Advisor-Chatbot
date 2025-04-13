@@ -3,7 +3,7 @@ const next = require('next');
 const bodyParser = require('body-parser');
 const { runAgent } = require('./main_agent'); // assuming this is your core logic
 
-const port = parseInt(process.env.PORT, 10) || 10000;
+const port = parseInt(process.env.PORT, 10) || 1000;
 const dev = process.env.NODE_ENV !== 'production';
 const app = next({ dev });
 const handle = app.getRequestHandler();
