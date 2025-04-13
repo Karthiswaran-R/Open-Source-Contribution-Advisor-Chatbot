@@ -1,33 +1,39 @@
-// server.js
 const express = require('express');
+const next = require('next');
 const bodyParser = require('body-parser');
-const app = express();
+const { runAgent } = require('./main_agent'); // assuming this is your core logic
 
-// Use body-parser middleware to parse incoming JSON data
-app.use(bodyParser.json());
+const port = parseInt(process.env.PORT, 10) || 10000;
+const dev = process.env.NODE_ENV !== 'production';
+const app = next({ dev });
+const handle = app.getRequestHandler();
 
-// Define the /api/chat endpoint
-app.post('/api/chat', async (req, res) => {
-  const { message } = req.body;
+app.prepare().then(() => {
+  const server = express();
+  server.use(bodyParser.json());
 
-  if (!message) {
-    return res.status(400).json({ error: 'No message provided' });
-  }
+  // Custom API route to handle chat requests
+  server.post('/api/chat', async (req, res) => {
+    const userInput = req.body.message;
+    if (!userInput) {
+      return res.status(400).json({ error: 'No message provided' });
+    }
 
-  try {
-    // Generate a bot response (this is a placeholder)
-    const reply = `You said: ${message}`;  // Simple echo response
+    try {
+      const response = await runAgent(userInput); // run your agent logic
+      res.status(200).json({ response });
+    } catch (err) {
+      console.error('Agent error:', err);
+      res.status(500).json({ error: 'Agent failed to respond' });
+    }
+  });
 
-    res.json({ reply });
-  } catch (error) {
-    console.error('Error generating reply:', error);
-    res.status(500).json({ error: 'Failed to generate reply' });
-  }
+  // Handle everything else (Next.js pages)
+  server.all('*', (req, res) => {
+    return handle(req, res);
+  });
+
+  server.listen(port, () => {
+    console.log(`> Ready on http://localhost:${port}`);
+  });
 });
-
-// Start the Express server
-const PORT = 5000;
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
-});
-
