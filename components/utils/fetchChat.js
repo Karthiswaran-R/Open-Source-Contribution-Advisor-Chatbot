@@ -1,5 +1,5 @@
 export async function fetchChat(message, onStreamChunk) {
-  const res = await fetch('https://open-source-contribution-advisor-chatbot.onrender.com/api/data', {
+  const res = await fetch('https://open-source-contribution-advisor-chatbot.onrender.com/', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ message }),
