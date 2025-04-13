@@ -12,7 +12,7 @@ export default function ChatInterface() {
     setLoading(true);
 
     try {
-      const res = await fetch('/api/chat', {
+      const res = await fetch('https://open-source-contribution-advisor-chatbot.onrender.com/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ input: message }),
