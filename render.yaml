@@ -1,7 +1,9 @@
 services:
   - type: web
-    name: open-source-chatbot
-    env: python
-    buildCommand: ""
-    startCommand: python api_agent.py
-    plan: free
+    name: open-source-guru
+    env: node
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: NODE_ENV
+        value: production
