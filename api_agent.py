@@ -67,8 +67,13 @@ app.add_middleware(
     CORSMiddleware,
     allow_origins=["https://open-source-contribution-advisor-chatbot.vercel.app/"],  # You can restrict this to your frontend's domain for security
     allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
+    allow_methods=["GET", "POST", "OPTIONS"],
+    allow_headers=["Authorization",
+        "Content-Type",
+        "Accept",
+        "Origin",
+        "User-Agent",
+        "X-Requested-With"],
 )
 
 @app.get("/")
@@ -82,3 +87,5 @@ async def ask_agent(query: str):
         return {"response": response.get("output", "No output returned.")}
     except Exception as e:
         return {"error": str(e)}
+
+
