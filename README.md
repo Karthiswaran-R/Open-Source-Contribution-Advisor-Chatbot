@@ -42,39 +42,32 @@ Navigate to the frontend folder (if it's separate) or directly in the project ro
 Run the following command to install all the necessary packages for the frontend:
 
 bash
-Copy
-Edit
-npm install
-Backend (Python/Flask):
+##### npm install
+##### Backend (Python/Flask):
 
 If the backend is Python-based (Flask, FastAPI, etc.), navigate to the backend folder (usually it will be a separate folder like backend or server).
 
 Create a virtual environment:
 
 bash
-Copy
-Edit
-python -m venv venv
-Activate the virtual environment:
+##### python -m venv venv
+##### Activate the virtual environment:
 
 For Windows:
 
 bash
-Copy
-Edit
-venv\Scripts\activate
+##### venv\Scripts\activate
+
 For Mac/Linux:
 
 bash
-Copy
-Edit
-source venv/bin/activate
-Install the required Python dependencies:
+##### source venv/bin/activate
+ Install the required Python dependencies:
 
 bash
-Copy
-Edit
-pip install -r requirements.txt
+
+##### pip install -r requirements.txt
+
 ### 3. Configure Environment Variables (if applicable)
 If there are any environment variables (like API keys, database URLs, etc.), you'll need to set them up.
 
@@ -86,15 +79,11 @@ If it’s missing, check the documentation for the environment variables needed 
 In the backend folder, run the following to start the Flask server (or the relevant backend server you’re using):
 
 bash
-Copy
-Edit
-python app.py
+##### python app.py
 or
 
 bash
-Copy
-Edit
-python server.py
+##### python server.py
 If you’re using Flask, it should be accessible by default at http://localhost:5000.
 
 If you’re using another backend framework (like FastAPI), refer to the project documentation to start it.
@@ -103,9 +92,7 @@ If you’re using another backend framework (like FastAPI), refer to the project
 In the project root or frontend folder, run the following to start the Next.js app:
 
 bash
-Copy
-Edit
-npm run dev
+##### npm run dev
 This will start the frontend server, and you can access it by visiting http://localhost:3000 in your web browser.
 
 ### 6. Test the Application
