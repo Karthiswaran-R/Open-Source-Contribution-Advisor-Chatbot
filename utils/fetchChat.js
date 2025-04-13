@@ -3,7 +3,7 @@
 export default async function fetchChat(message) {
   try {
     // Send the message to the backend API
-    const res = await fetch('/api/chat', {
+    const res = await fetch('https://open-source-contribution-advisor-chatbot.onrender.com/', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
