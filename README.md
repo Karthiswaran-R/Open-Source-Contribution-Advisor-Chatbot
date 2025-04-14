@@ -120,7 +120,7 @@ We welcome contributions to this project. To contribute:
  ##### Create a new Pull Request
 
 ## 8. License
-This project is licensed under the MIT License - see the [LICENSE] (./License) file for details.
+This project is licensed under the MIT License - see the LICENSE file for details.
 ## 🙌 Credits
 Built with 💚 by Karthiswaran R
 VLSI Engineer | Open Source Enthusiast | Creator of VLSI Design Hub
