@@ -2,10 +2,10 @@
 
 OpenSourceGuru is an AI-powered advisor chatbot that helps developers find the best open-source projects to contribute to, tailored to their skills, interests, and goals. It uses real-time GitHub API integration, dynamic input parsing, and smart tool selection to guide users through meaningful contributions.
 
-/home/Karthi/Pictures/Screenshot from 2025-04-14 23-37-16.png
-
+![Screenshot from 2025-04-14 23-37-16](https://github.com/user-attachments/assets/67365d0a-8de4-44d7-a5b9-5e67e3d59f6b)
 
 ---
+
 
 ## 🌟 Features
 
