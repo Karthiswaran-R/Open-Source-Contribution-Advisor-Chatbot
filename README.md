@@ -30,7 +30,8 @@ OpenSourceGuru is an AI-powered advisor chatbot that helps developers find the b
 
 ### 1. Clone the repo
 
-git clone https://github.com/Karthiswaran-R/Open-Source-Contribution-Advisor-Chatbot.git
+git clone https://github.com/Karthiswaran-R/Open-Source-Contribution-Advisor-Chatbot.git                                               
+
 cd open-source-chatbot
 ### 2. Install Dependencies
 First, you need to install the required dependencies for both the frontend and backend:
