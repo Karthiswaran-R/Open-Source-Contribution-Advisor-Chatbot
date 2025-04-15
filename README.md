@@ -119,7 +119,13 @@ We welcome contributions to this project. To contribute:
 
  ##### Create a new Pull Request
 
-## 8. License
+ ## Demo Video
+
+Here is a demo video of the Open Source Contribution Advisor Chatbot:
+
+https://github.com/user-attachments/assets/f96ce6f2-2ff9-473b-a794-b882248037ba
+
+## License
 This project is licensed under the MIT License - see the LICENSE file for details.
 ## 🙌 Credits
 Built with 💚 by Karthiswaran R
