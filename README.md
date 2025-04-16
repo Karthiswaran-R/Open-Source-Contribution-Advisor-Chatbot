@@ -129,4 +129,4 @@ https://github.com/user-attachments/assets/2f6c5332-24a4-4e85-a6a7-b877b0f7d5cf
 This project is licensed under the MIT License - see the LICENSE file for details.
 ## 🙌 Credits
 Built with 💚 by Karthiswaran R
-VLSI Engineer | Open Source Enthusiast | Creator of VLSI Design Hub
+VLSI Student | Open Source Enthusiast | Creator of VLSI Design Hub
